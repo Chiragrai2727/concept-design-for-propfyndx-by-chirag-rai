@@ -1,11 +1,30 @@
-<div align="center">
+# PropfyndX - Indian & Dubai Proptech Platform
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Responsive homepage for PropfyndX showcasing curated residential projects in Mumbai and Dubai, proptech solutions, developer partners, and real estate insights.
 
-  <h1>Built with AI Studio</h2>
+## Local Development
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+```bash
+npm install
+npm run dev
+```
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Production Build & Preview
 
-</div>
+```bash
+npm run build
+npm run preview
+```
+
+## Deploy
+
+### Netlify
+- **Build command**: `npm run build`
+- **Publish directory**: `dist`
+- Configured via `netlify.toml` and `public/_redirects`.
+
+### Vercel
+- **Framework preset**: Vite
+- **Build command**: `npm run build`
+- **Output directory**: `dist`
+- Configured via `vercel.json`.

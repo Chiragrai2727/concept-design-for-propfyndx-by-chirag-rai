@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #0A2A52;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-developers-marquee {
+  animation: scroll 40s linear infinite;
+}
+
+.animate-developers-marquee-reverse {
+  animation: scroll-reverse 50s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-developers-marquee,
+  .animate-developers-marquee-reverse {
+    animation: none;
+  }
+}
