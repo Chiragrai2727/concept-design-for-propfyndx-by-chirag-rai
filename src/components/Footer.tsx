@@ -11,18 +11,19 @@ import { FOOTER_DATA, LOGO_SRC } from '../data/content';
 export function Footer() {
   return (
     <footer className="mx-4 sm:mx-6 lg:mx-[60px] mb-6 rounded-[40px] bg-[#0A2A52] text-white px-6 sm:px-10 lg:px-14 pt-16 pb-[88px] lg:pb-8">
-      {/* Row 1: White logo + 4 social icons */}
+      {/* Row 1: Logo + 4 social icons */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-        <img
-          src={LOGO_SRC}
-          alt="PropfyndX"
-          width={213}
-          height={69}
-          loading="lazy"
-          decoding="async"
-          className="h-10 w-auto max-w-none object-contain"
-          style={{ filter: 'brightness(0) invert(1)' }}
-        />
+        <div className="bg-white rounded-full px-6 py-2.5 inline-flex items-center justify-center shrink-0">
+          <img
+            src={LOGO_SRC}
+            alt="PropfyndX"
+            width={213}
+            height={69}
+            loading="lazy"
+            decoding="async"
+            className="h-9 sm:h-10 w-auto max-w-none object-contain"
+          />
+        </div>
 
         <div className="flex items-center gap-3">
           {[
