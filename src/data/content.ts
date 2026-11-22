@@ -1,14 +1,3 @@
-export interface PropertyItem {
-  id: string;
-  name: string;
-  location: string;
-  config: string;
-  price?: string;
-  rera?: string;
-  imageUrl?: string;
-  imageAlt: string;
-}
-
 export interface SolutionItem {
   id: string;
   icon: 'building' | 'briefcase' | 'map' | 'warehouse' | 'landmark' | 'megaphone';
@@ -65,39 +54,6 @@ export const HERO_DATA = {
   heroImageAlt: 'Close-up upward view of a modern glass skyscraper facade in blue tones',
 };
 
-export const MUMBAI_PROPERTIES: PropertyItem[] = [
-  {
-    id: 'aaradhya-avaan',
-    name: 'Aaradhya Avaan',
-    location: 'Grant Road, Mumbai',
-    config: '3BHK | 4BHK | 5BHK',
-    price: '₹ 8.51 Cr*',
-    rera: 'P51900048675',
-    imageUrl: '/assets/photos/mumbai-aaradhya-avaan.jpg',
-    imageAlt: 'Aaradhya Avaan luxury residential tower in South Mumbai at golden hour',
-  },
-  {
-    id: 'truspace-prima-altiora',
-    name: 'Truspace Prima Altiora',
-    location: 'Wakad, Mumbai',
-    config: '2BHK | 3BHK',
-    price: '₹ 97.5 Lac(s)*',
-    rera: 'PR1260002602057',
-    imageUrl: '/assets/photos/mumbai-truspace-prima-altiora.jpg',
-    imageAlt: 'Truspace Prima Altiora modern residential tower with balconies and greenery',
-  },
-  {
-    id: 'alora',
-    name: 'Alora',
-    location: 'Santacruz East, Mumbai',
-    config: '2BHK | 3BHK',
-    price: '₹ 2.69 Cr*',
-    rera: 'P51800049048',
-    imageUrl: '/assets/photos/mumbai-alora.jpg',
-    imageAlt: 'Alora contemporary apartment building at dusk with lit windows and landscaped entrance',
-  },
-];
-
 export const TOP_CITIES: string[] = [
   'Mumbai',
   'Dubai',
@@ -107,33 +63,6 @@ export const TOP_CITIES: string[] = [
   'Thane',
   'Hyderabad',
   'Gurugram',
-];
-
-export const DUBAI_PROPERTIES: PropertyItem[] = [
-  {
-    id: 'karl-lagerfeld-villas',
-    name: 'Karl Lagerfeld Villas',
-    location: 'District 11, MBR City, Dubai',
-    config: '6BHK',
-    imageUrl: '/assets/photos/dubai-karl-lagerfeld-villas.jpg',
-    imageAlt: 'Karl Lagerfeld Villas ultra-luxury modern white and black villa in Dubai',
-  },
-  {
-    id: 'standalone-villa',
-    name: 'Standalone Villa',
-    location: 'Dubailand, Dubai',
-    config: '4BHK',
-    imageUrl: '/assets/photos/dubai-standalone-villa.jpg',
-    imageAlt: 'Standalone modern villa with palm tree garden in Dubailand, Dubai',
-  },
-  {
-    id: 'luxury-villa',
-    name: 'Luxury Villa',
-    location: 'The Valley, Dubai',
-    config: '4BHK',
-    imageUrl: '/assets/photos/dubai-luxury-villa.jpg',
-    imageAlt: 'Large luxury villa with swimming pool at sunset in The Valley, Dubai',
-  },
 ];
 
 export const SOLUTIONS: SolutionItem[] = [
@@ -335,3 +264,125 @@ export const FOOTER_DATA = {
   copyright: 'All rights are reserved | Copyright © 2026 PropfyndX | Regenti InfoTech Pvt. Ltd.',
   poweredBy: 'POWERED BY BRANDNITI5',
 };
+
+export interface PropertyDetail {
+  slug: string;
+  name: string;
+  developer?: string;
+  location: string;
+  type?: string;
+  configurations: string;
+  cardConfig: string;
+  price: string;
+  cardPrice: string;
+  rera?: string;
+  amenities?: string[];
+  photo: string;
+  photoAlt: string;
+  mapQuery: string;
+}
+
+export const PROPERTIES: PropertyDetail[] = [
+  {
+    slug: 'aaradhya-avaan',
+    name: 'Aaradhya Avaan',
+    developer: 'MICL Group',
+    location: 'Grant Road, Mumbai',
+    type: 'Residential',
+    configurations: '3BHK, 4BHK, 5BHK Sq. Ft.',
+    cardConfig: '3BHK | 4BHK | 5BHK',
+    price: '₹ 8.51 Cr',
+    cardPrice: '₹ 8.51 Cr*',
+    rera: 'P51900048675',
+    amenities: [
+      'Gymnasium',
+      'Swimming Pool',
+      'Kids Play Area',
+      'Security',
+      'High Speed Elevator',
+      'Parking',
+      'Garden',
+      'Outdoor Games',
+      'Indoor Games',
+      'Yoga',
+    ],
+    photo: '/assets/photos/mumbai-aaradhya-avaan.jpg',
+    photoAlt: 'Aaradhya Avaan luxury residential tower in South Mumbai at golden hour',
+    mapQuery: 'Aaradhya Avaan Experience Centre, Grant Road, Mumbai',
+  },
+  {
+    slug: 'truspace-prima-altiora',
+    name: 'Truspace Prima Altiora',
+    location: 'Wakad, Mumbai',
+    configurations: '2BHK, 3BHK',
+    cardConfig: '2BHK | 3BHK',
+    price: '₹ 97.5 Lac(s)',
+    cardPrice: '₹ 97.5 Lac(s)*',
+    rera: 'PR1260002602057',
+    photo: '/assets/photos/mumbai-truspace-prima-altiora.jpg',
+    photoAlt: 'Truspace Prima Altiora modern residential tower with balconies and greenery',
+    mapQuery: 'Truspace Prima Altiora, Wakad, Mumbai',
+  },
+  {
+    slug: 'alora',
+    name: 'Alora',
+    location: 'Santacruz East, Mumbai',
+    configurations: '2BHK, 3BHK',
+    cardConfig: '2BHK | 3BHK',
+    price: '₹ 2.69 Cr',
+    cardPrice: '₹ 2.69 Cr*',
+    rera: 'P51800049048',
+    photo: '/assets/photos/mumbai-alora.jpg',
+    photoAlt: 'Alora contemporary apartment building at dusk with lit windows and landscaped entrance',
+    mapQuery: 'Alora, Santacruz East, Mumbai',
+  },
+  {
+    slug: 'karl-lagerfeld-villas',
+    name: 'Karl Lagerfeld Villas',
+    location: 'District 11, MBR City, Dubai',
+    configurations: '6BHK',
+    cardConfig: '6BHK',
+    price: 'Price On Request',
+    cardPrice: 'Price On Request',
+    photo: '/assets/photos/dubai-karl-lagerfeld-villas.jpg',
+    photoAlt: 'Karl Lagerfeld Villas ultra-luxury modern white and black villa in Dubai',
+    mapQuery: 'Karl Lagerfeld Villas, District 11, MBR City, Dubai',
+  },
+  {
+    slug: 'standalone-villa',
+    name: 'Standalone Villa',
+    location: 'Dubailand, Dubai',
+    configurations: '4BHK',
+    cardConfig: '4BHK',
+    price: 'Price On Request',
+    cardPrice: 'Price On Request',
+    photo: '/assets/photos/dubai-standalone-villa.jpg',
+    photoAlt: 'Standalone modern villa with palm tree garden in Dubailand, Dubai',
+    mapQuery: 'Standalone Villa, Dubailand, Dubai',
+  },
+  {
+    slug: 'luxury-villa',
+    name: 'Luxury Villa',
+    location: 'The Valley, Dubai',
+    configurations: '4BHK',
+    cardConfig: '4BHK',
+    price: 'Price On Request',
+    cardPrice: 'Price On Request',
+    photo: '/assets/photos/dubai-luxury-villa.jpg',
+    photoAlt: 'Large luxury villa with swimming pool at sunset in The Valley, Dubai',
+    mapQuery: 'Luxury Villa, The Valley, Dubai',
+  },
+  {
+    slug: 'aplite-sapphire',
+    name: 'Aplite Sapphire',
+    location: 'Grant Road, Mumbai',
+    configurations: '1BHK, 2BHK, 3BHK',
+    cardConfig: '1BHK | 2BHK | 3BHK',
+    price: 'Price On Request',
+    cardPrice: 'Price On Request',
+    rera: 'P51900078543',
+    photo: '/assets/photos/mumbai-aplite-sapphire.jpg',
+    photoAlt: 'Aplite Sapphire modern high-rise residential tower seen from above at dusk with lights on',
+    mapQuery: 'Aplite Sapphire, Grant Road, Mumbai',
+  },
+];

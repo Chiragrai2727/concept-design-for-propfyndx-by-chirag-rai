@@ -13,7 +13,11 @@ export function Footer() {
     <footer className="mx-4 sm:mx-6 lg:mx-[60px] mb-6 rounded-[40px] bg-[#0A2A52] text-white px-6 sm:px-10 lg:px-14 pt-16 pb-[88px] lg:pb-8">
       {/* Row 1: Logo + 4 social icons */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div className="bg-white rounded-full px-6 py-2.5 inline-flex items-center justify-center shrink-0">
+        <a
+          href="#/"
+          aria-label="Go to home page"
+          className="bg-white rounded-full px-6 py-2.5 inline-flex items-center justify-center shrink-0 cursor-pointer"
+        >
           <img
             src={LOGO_SRC}
             alt="PropfyndX"
@@ -23,7 +27,7 @@ export function Footer() {
             decoding="async"
             className="h-9 sm:h-10 w-auto max-w-none object-contain"
           />
-        </div>
+        </a>
 
         <div className="flex items-center gap-3">
           {[
